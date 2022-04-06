@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "310537994052",
+    "firebase_url": "https://fir-backend-9578d-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "fir-backend-9578d",
+    "storage_bucket": "fir-backend-9578d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310537994052:android:5268365b6524efb207e111",
+        "android_client_info": {
+          "package_name": "com.lifegoalmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "310537994052-7v7j4t01kiu2ujrf72a4u7ukbic0vf5p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3cc2l6ySuxNmPK6yIQzZbnZgI7nJ6dDY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "310537994052-7v7j4t01kiu2ujrf72a4u7ukbic0vf5p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
