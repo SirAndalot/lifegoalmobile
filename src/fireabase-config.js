@@ -26,3 +26,4 @@ export const db = getFirestore(Fire);
 export const auth = getAuth(Fire);
 
 export const storage = getStorage(Fire);
+

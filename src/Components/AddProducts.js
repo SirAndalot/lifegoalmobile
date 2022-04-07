@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import "../Styles/AddProducts.css";
 import { storage, db } from "../fireabase-config";
+import { ref, uploadBytesResumable } from "@firebase/storage";
+import "../Styles/AddProducts.css";
 
 const AddProducts = () => {
   const [productName, setProductName] = useState("");
@@ -25,9 +26,11 @@ const AddProducts = () => {
   // add product
   const addProduct = (e) => {
     e.preventDefault();
-    const uploadTask = storage
-      .ref(`product-images/${productImg.name}`)
-      .put(productImg);
+    const storageRef = ref(storage, `/product-image/${productImg.name}`);
+    const uploadTask = uploadBytesResumable(storageRef, productImg);
+    // const uploadTask = storage
+    //   .ref(`product-image/${productImg.name}`)
+    //   .put(productImg);
     uploadTask.on(
       "state_changed",
       (snapshot) => {
@@ -38,7 +41,7 @@ const AddProducts = () => {
       (err) => setError(err.message),
       () => {
         storage
-          .ref("product-images")
+          .ref("product-image")
           .child(productImg.name)
           .getDownloadURL()
           .then((url) => {
