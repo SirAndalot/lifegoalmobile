@@ -15,6 +15,7 @@ import { UserAuthContextProvider } from "./Context/UserAuthContext";
 import AddUsers from "./Components/AddUsers";
 import { ToastContainer } from "react-toastify";
 import { useState } from "react";
+import AddProducts from "./Components/AddProducts";
 
 function App() {
   const [userId, setUserID] = useState("");
@@ -56,6 +57,7 @@ function App() {
                 />
               }
             />
+            <Route path="/products" element={<AddProducts />} />
 
             <Route
               path="/Dashboard"
